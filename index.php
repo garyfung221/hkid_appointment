@@ -49,7 +49,7 @@ date_default_timezone_set('Asia/Hong_Kong');
 
     <mat-form-field>
       <!--HKID Check Digit-->
-    <label for="check_digit">Check Digit</label>
+    <label for="check_digit">Check Digit (Upper Case)</label>
     <input type="text" placeholder="( )" name="check_digit" pattern=".{1}" maxlength="1" size="30" required>
     </mat-form-field>
 </div>
