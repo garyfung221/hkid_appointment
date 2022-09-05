@@ -21,7 +21,7 @@
     <nav>
       <ul>
         <li><a href="index.php">Home Page</a></li>
-        <li><a href="#">Appointment Enquiry</a></li>
+        <li><a href="enquiry_page.php">Appointment Enquiry</a></li>
         
         <li id="navbar_staff_page"><a href="#">Staff Page</a></li>
       </ul>
