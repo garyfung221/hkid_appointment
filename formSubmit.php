@@ -72,7 +72,11 @@ if(isset($_POST['appointment_btn'])){
     }
 */  
 
+include "openssl_encrypt.php";
 
+
+
+$encrypted_fullhkid=encryption($fullhkid,$key);
 
   //Captcha Validtion 
   $answer=$_SESSION["validationAnswer"];
@@ -86,7 +90,7 @@ if(isset($_POST['appointment_btn'])){
 
       //Papared Statement
         $sql = $conn->prepare("INSERT INTO appointment_list (hkid,dob,app_date,app_time,enquiry_code) VALUES (?,?,?,?,?)");
-        $sql->bind_param("sssss",$fullhkid,$dob,$appointment_date,$appointment_time,$enquiry_code);
+        $sql->bind_param("sssss",$encrypted_fullhkid,$dob,$appointment_date,$appointment_time,$enquiry_code);
         $sql->execute();
 
 /*
