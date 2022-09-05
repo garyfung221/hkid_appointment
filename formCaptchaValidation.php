@@ -1,7 +1,7 @@
 <?php
 session_start();
-$a_validation_number = rand(1,10);
-$b_validation_number = rand(2,20);
+$a_validation_number = rand(2,20);
+$b_validation_number = rand(1,10);
 
 $randomOperators = array("*","+","-");
 $symobls = rand(0,count($randomOperators)-1);
