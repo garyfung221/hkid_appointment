@@ -47,6 +47,11 @@
 
 <?php 
 if(isset($_POST['staff_submit'])){
+
+    $username=htmlspecialchars($_POST['username'],ENT_QUOTES,'UTF-8');
+    $password=htmlspecialchars($_POST['password'],ENT_QUOTES,'UTF-8');
+
+
     $username = mysqli_real_escape_string($conn,$_POST['username']);
     $password = mysqli_real_escape_string($conn,$_POST['password']);
 
