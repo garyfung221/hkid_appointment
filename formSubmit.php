@@ -74,13 +74,49 @@ if(isset($_POST['appointment_btn'])){
 
 include "openssl_encrypt.php";
 
-
+$appointment_full = false;
 
 $encrypted_fullhkid=encryption($fullhkid,$key);
 
   //Captcha Validtion 
   $answer=$_SESSION["validationAnswer"];
-  $userInput=$_POST['validation'];
+
+  //prvent XSS
+  $userInput=htmlspecialchars($_POST['validation'],ENT_QUOTES,'UTF-8');
+  
+
+
+
+  //Check the appointment quotas 
+  $sql = $conn->prepare("SELECT * FROM appointment_quotas WHERE app_quotas_date = ?");
+  $sql->bind_param("s",$appointment_date);
+  $sql->execute();
+  $result=$sql->get_result();
+  
+
+  //If the appointment quotas is full , return and alert
+  while($row = $result->fetch_assoc()){
+  
+    if($row['app_quotas']==0){
+  
+      $appointment_full =true;
+      if($appointment_full==true){
+        echo "This day's appointment is already full. Please select the other date ! ";
+        echo "<br>";
+        echo "<a href='index.php'>Click here to Go back HomePage !</a>";
+        return 0;
+      }
+       
+    }else{
+      //If the appointment has the remaining quotas , subtract 1 of the selected date quotas and create an appointment
+      $subtraction = 1;
+      $sql = $conn->prepare("UPDATE appointment_quotas SET app_quotas = (app_quotas - ?) WHERE app_quotas_date = ?");
+      $sql->bind_param("is",$subtraction,$appointment_date);
+      $sql->execute();
+  
+    }
+    }
+  
   
   //If Captch Validation and User Data Input are correct 
   if($answer == $userInput && $allData_IsCorrect == true){
@@ -119,7 +155,6 @@ echo "inserted!";
     echo "<br>";
     echo "<a href='index.php'>Click here to Go back HomePage !</a>";
   }
-
 
 
 }
