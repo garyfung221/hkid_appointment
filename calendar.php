@@ -11,6 +11,17 @@ include "calendar_calculatequota_process.php";
    
    <strong><h5><?php echo "CURRENT DATE : " .date("l "). date("Y-m-d") . "<br>"; ?></h5></strong>
    <br>
+   The representative colours meaning :
+   <br>
+   <br>
+   Current day number : <span style="color:grey">Grey</span>
+   <br>Full: <span style="color:red">Red</span> 
+   <br>
+   Remaining not many quotas: <span style="color:orange">Orange</span> 
+   <br>
+   enough available: <span style="color:#1abc9c">Green</span>
+   <br>
+   <br>
    <div class="month">      
 <ul>
 
