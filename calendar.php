@@ -1,3 +1,12 @@
+
+<?php
+//Set the timezone in Hong Kong
+date_default_timezone_set('Asia/Hong_Kong');
+
+include "calendar_calculatequota_process.php";
+?>
+
+
 <h1>Appointment Calendar</h1>
    
    <strong><h5><?php echo "CURRENT DATE : " .date("l "). date("Y-m-d") . "<br>"; ?></h5></strong>
@@ -29,14 +38,14 @@
 <li>3</li>
 <li>4</li>
 <li>5</li>
-<li>6</li>
-<li>7</li>
-<li>8</li>
-<li>9</li>
-<li>10</li>
-<li>11</li>
-<li>12</li>
-<li>13</li>
+<li><span class="active">6</span></li>
+<li><span class="<?php echo calquotas("7");?>"> 7</span></li>
+<li><span class="<?php echo calquotas("8");?>"> 8</span></li>
+<li><span class="<?php echo calquotas("9");?>"> 9</span></li>
+<li><span class="<?php echo calquotas("10");?>">10</span></li>
+<li><span class="<?php echo calquotas("11");?>">11</span></li>
+<li><span class="<?php echo calquotas("12");?>">12</span></li>
+<li><span class="<?php echo calquotas("13");?>">13</span></li>
 <li>14</li>
 <li>15</li>
 <li>16</li>
