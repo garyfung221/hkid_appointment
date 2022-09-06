@@ -19,7 +19,7 @@ $result=$sql->get_result();
 while($row = $result->fetch_assoc()){
     if($row['app_quotas']==0){
         return "full_background";
-    }else if($row['app_quotas']==8){
+    }else if($row['app_quotas']<8){
             return "almostfull_background";
         }else{
             return "available_background";
