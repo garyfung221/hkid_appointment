@@ -46,16 +46,17 @@ date_default_timezone_set('Asia/Hong_Kong');
   <mat-form-field>
     <!--HKID-->
     <label for="hkid">Hong Kong Identity Card Number</label>
-    <input type="text" placeholder="e.g Y123456" pattern="^[A-Z]{1}[0-9]{6}$" name="hkid" size="70" required>
+    <input type="password" placeholder="e.g Y123456" pattern="^[A-Z]{1}[0-9]{6}$" name="hkid" size="70" id="myInput" required>
     </mat-form-field>
-
     <mat-form-field>
       <!--HKID Check Digit-->
     <label for="check_digit">Check Digit</label>
     <input type="text" placeholder="( )" name="check_digit" pattern=".{1}" maxlength="1" size="30" required>
     </mat-form-field>
 </div>
-
+Show HKID<input type="checkbox" onclick="passwordVisibility()">
+<br>
+<br>
     Date of Birth
     <div style="display: flex;">
     <label for="dob"><br></label>
@@ -117,3 +118,15 @@ Appointment Time <small>(Office hours are 10am to 5:30pm)</small>
 
 <!--footer-->
 <?php include "footer.php"?>
+
+  <!--button to show the password-->
+  <script>
+      function passwordVisibility() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+      </script>
