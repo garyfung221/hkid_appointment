@@ -1,6 +1,7 @@
 <!--header-->
 <?php include "header.php"?>
 
+
 <div class="wrapper row2">
   <div id="container" class="clear">
     <!-- website picture -->
@@ -15,13 +16,14 @@ date_default_timezone_set('Asia/Hong_Kong');
       <!-- first area -->
      
       <?php include "calendar.php"?>
+      
 
       <!-- second area -->
       <h1>Appointment Form</h1>
 
       <?php include "formCaptchaValidation.php"?>
 
-
+    
   
           <!-- content -->
     <section id="shout">
@@ -49,7 +51,7 @@ date_default_timezone_set('Asia/Hong_Kong');
 
     <mat-form-field>
       <!--HKID Check Digit-->
-    <label for="check_digit">Check Digit (Upper Case)</label>
+    <label for="check_digit">Check Digit</label>
     <input type="text" placeholder="( )" name="check_digit" pattern=".{1}" maxlength="1" size="30" required>
     </mat-form-field>
 </div>
