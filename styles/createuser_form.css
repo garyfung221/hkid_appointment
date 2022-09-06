@@ -1,0 +1,33 @@
+   /* Form */
+   .form {
+    max-width: 600px; 
+    padding: 20px;
+    border: 1px solid #eee;
+    background: #f2f2f2;
+  }
+
+  /*  Fields & Labels */
+  .form label, .form input, .form textarea, .form select, .form button {
+    display: block;
+    width: 100%;
+  }
+  .form label { padding: 10px 0; }
+  .form input, .form textarea, .form select { padding: 10px; }
+
+  /* buttons */
+  input[type=button], input[type=submit], button {
+    font-size: 1em;
+    font-weight: 700;
+    padding: 10px;
+    border: 0;
+    color: #fff;
+    background: #870000;
+    cursor: pointer;
+  }
+  input[type=submit] { margin-top: 20px; }
+
+  /* font */
+  * {
+    font-family: arial, sans-serif;
+    box-sizing: border-box;
+  }
