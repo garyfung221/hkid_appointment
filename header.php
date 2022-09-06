@@ -5,6 +5,9 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="styles/basic_layout.css" type="text/css">
 <link rel="stylesheet" href="styles/styles.css" type="text/css">
+<link rel="stylesheet" href="styles/calendar.css" type="text/css">
+
+
 <!--Website Page Icon-->
 <link rel="icon" type="image/x-icon" href="images/website_icon.ico">
 
@@ -23,7 +26,7 @@
         <li><a href="index.php">Home Page</a></li>
         <li><a href="enquiry_page.php">Appointment Enquiry</a></li>
         
-        <li id="navbar_staff_page"><a href="#">Staff Page</a></li>
+        <li id="navbar_staff_page"><a href="staff_login.php">Staff Page</a></li>
       </ul>
     </nav>
   </header>
