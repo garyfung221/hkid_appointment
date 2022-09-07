@@ -10,7 +10,13 @@ The simple HKID appointment system (website security project) :
  - Salt and Hash (Staff Login & Create Staff(Admin Panel))
  - Mysqli_real_escape_string (Staff Login)
  - Htmlspecialchars (Add Staff , formSubmit's Validation userinput , Staff Login)
- - Hide Errors from Visitors
+ - Hide Errors from Visitors (php.ini setup the display_errors=Off On->Off)
 
+
+ Database:
+
+ - clean : Nothing data inserted
+ - final : Many data inserted
+ - test_quotas : The quotas date of 10 is 9 , to testing the Calendar colour change from green to orange
 
    Author: Gary Fung
