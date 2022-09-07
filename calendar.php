@@ -19,7 +19,7 @@ include "calendar_calculatequota_process.php";
    <br>
    Remaining not many quotas: <span style="color:orange">Orange</span> 
    <br>
-   enough available: <span style="color:#1abc9c">Green</span>
+   Enough available: <span style="color:#1abc9c">Green</span>
    <br>
    <br>
    <div class="month">      
@@ -49,10 +49,10 @@ include "calendar_calculatequota_process.php";
 <li>3</li>
 <li>4</li>
 <li>5</li>
-<li><span class="active">6</span></li>
-<li><span class="<?php echo calquotas("7");?>"> 7</span></li>
-<li><span class="<?php echo calquotas("8");?>"> 8</span></li>
-<li><span class="<?php echo calquotas("9");?>"> 9</span></li>
+<li>6</li>
+<li><span class="active">7</span></li>
+<li><span class="<?php echo calquotas("8");?>">8</span></li>
+<li><span class="<?php echo calquotas("9");?>">9</span></li>
 <li><span class="<?php echo calquotas("10");?>">10</span></li>
 <li><span class="<?php echo calquotas("11");?>">11</span></li>
 <li><span class="<?php echo calquotas("12");?>">12</span></li>
