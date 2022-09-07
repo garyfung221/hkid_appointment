@@ -76,7 +76,9 @@ if(isset($_POST['staff_submit'])){
         echo "<h2>User name not exist, authentication failed</h2>";
     }
 
-    /*U
+    /*
+    //testing 
+    
     if($username=="a" && $password=="1"){
         header('Location: adminpanel_homepage.php');
     }
