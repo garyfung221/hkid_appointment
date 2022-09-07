@@ -12,4 +12,4 @@ The simple HKID appointment system (website security project) :
  - Htmlspecialchars (Add Staff , formSubmit's Validation userinput , Staff Login)
  - Hide Errors from Visitors
 
- - Author: Gary Fung
+   Author: Gary Fung
