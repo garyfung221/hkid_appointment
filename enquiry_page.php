@@ -61,7 +61,7 @@ date_default_timezone_set('Asia/Hong_Kong');
     <input type="text" parttern="[0-9]" placeholder="<?php echo " $a_validation_number$symobls$b_validation_number = ? " ?>" name="validation" required>
 
 
-    <button type="submit" name="enquiry_btn" class="btn">Click To Appointment</button>
+    <button type="submit" name="enquiry_btn" class="btn">Click To Enquiry</button>
   </form>
 </div>
 
