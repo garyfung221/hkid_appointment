@@ -10,5 +10,6 @@ The simple HKID appointment system (website security project) :
  - Salt and Hash (Staff Login & Create Staff(Admin Panel))
  - Mysqli_real_escape_string (Staff Login)
  - Htmlspecialchars (Add Staff , formSubmit's Validation userinput , Staff Login)
+ - Hide Errors from Visitors
 
- Author: Gary Fung
+ - Author: Gary Fung
