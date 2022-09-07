@@ -96,9 +96,7 @@ $encrypted_fullhkid=encryption($fullhkid,$key);
 
   //If the appointment quotas is full , return and alert
   while($row = $result->fetch_assoc()){
-  
     if($row['app_quotas']==0){
-  
       $appointment_full =true;
       if($appointment_full==true){
         echo "This day's appointment is already full. Please select the other date ! ";
@@ -107,13 +105,6 @@ $encrypted_fullhkid=encryption($fullhkid,$key);
         return 0;
       }
        
-    }else{
-      //If the appointment has the remaining quotas , subtract 1 of the selected date quotas and create an appointment
-      $subtraction = 1;
-      $sql = $conn->prepare("UPDATE appointment_quotas SET app_quotas = (app_quotas - ?) WHERE app_quotas_date = ?");
-      $sql->bind_param("is",$subtraction,$appointment_date);
-      $sql->execute();
-  
     }
     }
   
@@ -128,6 +119,12 @@ $encrypted_fullhkid=encryption($fullhkid,$key);
         $sql = $conn->prepare("INSERT INTO appointment_list (hkid,dob,app_date,app_time,enquiry_code) VALUES (?,?,?,?,?)");
         $sql->bind_param("sssss",$encrypted_fullhkid,$dob,$appointment_date,$appointment_time,$enquiry_code);
         $sql->execute();
+
+        //If the appointment has the remaining quotas , subtract 1 of the selected date quotas and create an appointment
+      $subtraction = 1;
+      $sql = $conn->prepare("UPDATE appointment_quotas SET app_quotas = (app_quotas - ?) WHERE app_quotas_date = ?");
+      $sql->bind_param("is",$subtraction,$appointment_date);
+      $sql->execute();
 
 /*
 
