@@ -1,5 +1,5 @@
 # hkid_appointment
-The simple HKID Card appointment system (website security project) :
+The ID Card appointment system (website security project) :
 
  Security Features Include :
 
