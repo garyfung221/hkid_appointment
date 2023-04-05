@@ -1,7 +1,7 @@
 # hkid_appointment
 The ID Card booking system (website security project) :
 
-![appointment2](https://user-images.githubusercontent.com/66684175/229858769-db3661c1-00e4-4d7f-9d77-d5ea8ed4d77a.PNG)
+
 
 
 ![appointment](https://user-images.githubusercontent.com/66684175/229857960-472da7d8-82a3-4e32-8172-5df9071d3f1f.png)
