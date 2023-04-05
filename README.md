@@ -23,7 +23,7 @@ The ID Card booking system (website security project) :
 
 Database:
 
-<h3>salt hash</h3>
+<h3>Salt Hash</h3>
 
 ![salthash](https://user-images.githubusercontent.com/66684175/230132917-47ba82aa-2975-40ab-80f5-45860830895c.PNG)
 
