@@ -1,5 +1,6 @@
 
-<link rel="stylesheet" href="styles/styles.css" type="text/css">
+<link rel="stylesheet" href="styles/alert.css" type="text/css">
+
 
 <div class="websiteAlert" id="websiteAlert">
       <h1 class="alert-heading">Alert</h1>
@@ -13,7 +14,6 @@
     
     document.getElementById('accept').addEventListener("click",()=>{
             alert.style.display = "none"
-            document.body.style.pointerEvents ="auto"
     })
 
 </script>
