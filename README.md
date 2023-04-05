@@ -7,6 +7,8 @@ The ID Card booking system (website security project) :
 ![appointment](https://user-images.githubusercontent.com/66684175/229857960-472da7d8-82a3-4e32-8172-5df9071d3f1f.png)
 
 
+
+
  Security Features Include :
 
  - Regular expression (Appointment Form, Enquiry Form)
@@ -19,10 +21,17 @@ The ID Card booking system (website security project) :
  - Hide Errors from Visitors (php.ini setup the display_errors=Off On->Off)
 
 
- Database:
+Database:
 
- - clean : Nothing data inserted
- - final : Many data inserted
- - test_quotas : The quotas date of 10 is 9 , to testing the Calendar colour change from green to orange
+<h3>salt hash</h3>
 
-   Author: Gary Fung
+![salthash](https://user-images.githubusercontent.com/66684175/230132917-47ba82aa-2975-40ab-80f5-45860830895c.PNG)
+
+<h3>OpenSSL Encryption</h3>
+
+![openSSL_encryption](https://user-images.githubusercontent.com/66684175/230133130-a8851cf6-fbb5-4240-bef1-a64eb0e3162a.PNG)
+
+
+
+
+Author: Gary Fung
