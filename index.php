@@ -130,3 +130,7 @@ Appointment Time <small>(Office hours are 10am to 5:30pm)</small>
         }
       }
       </script>
+
+
+
+<?php include "alert.php"?>

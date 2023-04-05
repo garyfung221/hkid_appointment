@@ -1,32 +1,41 @@
-
-
 /* the navbar position setting */
-#navbar_staff_page{
-    float:right;
+#navbar_staff_page {
+  float: right;
 }
 
-
-
 /* Add media queries for smaller screens */
-@media screen and (max-width:720px) {
-  .weekdays li, .days li {width: 13.1%;}
+@media screen and (max-width: 720px) {
+  .weekdays li,
+  .days li {
+    width: 13.1%;
+  }
 }
 
 @media screen and (max-width: 420px) {
-  .weekdays li, .days li {width: 12.5%;}
-  .days li .active {padding: 2px;}
+  .weekdays li,
+  .days li {
+    width: 12.5%;
+  }
+  .days li .active {
+    padding: 2px;
+  }
 }
 
 @media screen and (max-width: 290px) {
-  .weekdays li, .days li {width: 12.2%;}
+  .weekdays li,
+  .days li {
+    width: 12.2%;
+  }
 }
 
-
 /* Appointment Form */
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
-
-
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: not-allowed;
+}
+* {
+  box-sizing: border-box;
+}
 
 /* Add styles to the form container */
 .form-container {
@@ -36,32 +45,33 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 /* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password]{
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-  }
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus{
-    background-color: #ddd;
-    outline: none;
-  }
-  
-  /* Set a style for the submit/login button */
-  .form-container .btn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
-  }
-  
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
@@ -69,12 +79,53 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover,
+.open-button:hover {
   opacity: 1;
 }
 
-
 /* The number input width */
-input[type='number']{
-    width: 80px;
-} 
+input[type="number"] {
+  width: 80px;
+}
+
+.websiteAlert {
+  position: fixed;
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+  top: 40%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(33, 25, 40);
+  height: 300px;
+  border: 5px solid slategray;
+}
+
+.alert-heading {
+  font-size: 5rem;
+}
+
+.alert-text > span {
+  color: red;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+span > .dont {
+  color: rgb(135, 135, 209);
+}
+
+#accept {
+  width: 100px;
+  margin-top: 1em;
+  padding: 0.5em 0;
+  background-color: #0d3d5e;
+  border: 5px solid black;
+  color: rgb(145, 83, 83);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}

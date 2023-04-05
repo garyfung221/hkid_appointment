@@ -27,7 +27,7 @@ include "calendar_calculatequota_process.php";
 
  <li>
    September<br>
-   <span style="font-size:18px">2022</span>
+   <span style="font-size:18px"><?php echo date("Y") ?></span>
    
  </li>
 </ul>
@@ -44,36 +44,33 @@ include "calendar_calculatequota_process.php";
 </ul>
 
 <ul class="days">  
-<li>1</li>
-<li>2</li>
-<li>3</li>
-<li>4</li>
-<li>5</li>
-<li>6</li>
-<li><span class="active">7</span></li>
-<li><span class="<?php echo calquotas("8");?>">8</span></li>
-<li><span class="<?php echo calquotas("9");?>">9</span></li>
-<li><span class="<?php echo calquotas("10");?>">10</span></li>
-<li><span class="<?php echo calquotas("11");?>">11</span></li>
-<li><span class="<?php echo calquotas("12");?>">12</span></li>
-<li><span class="<?php echo calquotas("13");?>">13</span></li>
-<li>14</li>
-<li>15</li>
-<li>16</li>
-<li>17</li>
-<li>18</li>
-<li>19</li>
-<li>20</li>
-<li>21</li>
-<li>22</li>
-<li>23</li>
-<li>24</li>
-<li>25</li>
-<li>26</li>
-<li>27</li>
-<li>28</li>
-<li>29</li>
-<li>30</li>
-</ul>
+
+<?php 
+//cal current year , month , days and 
+$month = date('m');
+$year = date('Y');
+$Days = cal_days_in_month(CAL_GREGORIAN,$month,$year);
+?>
+
+<?php
+//if i == current day , class="active" , else <li></li>
+$currentDay =  date('d');
+
+for($i = 1 ; $i <= $Days ; $i++){
+    if($currentDay == $i){
+        ?>
+<li><span class="active"><?php echo $i ?></span></li>
+        <?php
+    }else{
+      ?>
+        <li><span class="<?php echo calquotas($i);?>"><?php echo $i ?></span></li>
+      <?php
+    }
+?>
+
+
+<?php   
+}
+?>
 
 <br>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2022-09-07 16:52:52
+-- 產生時間： 2023-04-05 15:13:25
 -- 伺服器版本： 10.4.24-MariaDB
 -- PHP 版本： 8.1.6
 
@@ -64,7 +64,8 @@ INSERT INTO `appointment_list` (`app_id`, `hkid`, `dob`, `app_date`, `app_time`,
 (69, 'V0cvTWVvMnB4VXJMeHJxSmRxdDVwUT09OjqU4tV8lo+BpKA2yoqIMe/+', '2000-01-25', '2022-09-11', '14:30:00', '1290', '2022-09-07 12:19:03'),
 (70, 'aW0wY1FHRXRHRU4wVzR5a3Y5Nkpudz09OjoHSWgrckzlHlkXTA49yG0O', '1994-12-01', '2022-09-11', '13:30:00', '6767', '2022-09-07 12:20:02'),
 (71, 'K29LbEdYT0huZXVmVGJtcVRDTXB5Zz09OjqD0t2Qh/jvjw2WcIyCTFw/', '2000-01-18', '2022-09-11', '16:30:00', '9021', '2022-09-07 12:20:34'),
-(73, 'Q2o5eDU3R0Q1TXdKbzJGNG1UZGxHZz09OjrSn6vMzPB2GwsFJOukeLTu', '2000-01-18', '2022-09-11', '13:00:00', '4242', '2022-09-07 14:22:01');
+(73, 'Q2o5eDU3R0Q1TXdKbzJGNG1UZGxHZz09OjrSn6vMzPB2GwsFJOukeLTu', '2000-01-18', '2022-09-11', '13:00:00', '4242', '2022-09-07 14:22:01'),
+(76, 'TmJwd3E3clZPclR3eHZkU1p0YTdvZz09Ojrnt5Zzlq1SrLh8xVmTjF4e', '2000-01-01', '2023-04-06', '10:00:00', '4242', '2023-04-05 13:09:40');
 
 -- --------------------------------------------------------
 
@@ -77,17 +78,6 @@ CREATE TABLE `appointment_quotas` (
   `app_quotas_date` date NOT NULL,
   `app_quotas` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- 傾印資料表的資料 `appointment_quotas`
---
-
-INSERT INTO `appointment_quotas` (`app_quotas_id`, `app_quotas_date`, `app_quotas`) VALUES
-(6, '2022-09-08', 16),
-(7, '2022-09-09', 16),
-(8, '2022-09-10', 0),
-(9, '2022-09-11', 8),
-(10, '2022-09-12', 16);
 
 -- --------------------------------------------------------
 
@@ -141,13 +131,13 @@ ALTER TABLE `staff_account`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `appointment_list`
 --
 ALTER TABLE `appointment_list`
-  MODIFY `app_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `app_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `appointment_quotas`
 --
 ALTER TABLE `appointment_quotas`
-  MODIFY `app_quotas_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `app_quotas_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `staff_account`
