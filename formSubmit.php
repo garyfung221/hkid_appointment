@@ -93,6 +93,13 @@ $encrypted_fullhkid=encryption($fullhkid,$key);
   $sql->execute();
   $result=$sql->get_result();
   
+  //If the appointment quotas do not exist, return an alert
+if($result->num_rows == 0){
+  echo "This day's appointment does not exist. Please select another date!";
+  echo "<br>";
+  echo "<a href='index.php'>Click here to go back to the homepage!</a>";
+  return 0;
+}
 
   //If the appointment quotas is full , return and alert
   while($row = $result->fetch_assoc()){

@@ -16,6 +16,8 @@ $sql->bind_param("s",$date);
 $sql->execute();
 $result=$sql->get_result();
 
+
+
 while($row = $result->fetch_assoc()){
     if($row['app_quotas']==0){
         return "full_background";
